@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    <assemblyIdentity
+        version="1.0.0.0"
+        processorArchitecture="X86"
+        name="CompanyName.ProductName.YourAppName"
+        type="win32" />
+    <description>Your application description here</description>
+    <file name="PRP.dll">
+	<typelib tlbid="{BC3ECE4E-EE9F-41CE-9401-456D618D268C}" version="5.10" flags="" helpdir="" />
+	<comClass clsid="{BD1E9ACF-3B20-11D6-B4B1-002018B8B090}" tlbid="{BC3ECE4E-EE9F-41CE-9401-456D618D268C}" threadingModel="Apartment" progid="PresentRemoteProvider.RemoteProvider" description="" />
+	<comClass clsid="{834E53FD-6109-4403-8E72-C40265311507}" tlbid="{BC3ECE4E-EE9F-41CE-9401-456D618D268C}" threadingModel="Apartment" progid="PresentRemoteProvider.APTransManager" description="" />
+	<comClass clsid="{C1114078-5E34-403A-9672-4C02B82285BD}" tlbid="{BC3ECE4E-EE9F-41CE-9401-456D618D268C}" threadingModel="Apartment" progid="PresentRemoteProvider.GenericReports" description="" />
+    </file>
+    
+    <dependency>
+        <dependentAssembly>
+            <assemblyIdentity
+                type="win32"
+                name="Microsoft.Windows.Common-Controls"
+                version="6.0.0.0"
+                processorArchitecture="X86"
+                publicKeyToken="6595b64144ccf1df"
+                language="*" />
+        </dependentAssembly>
+    </dependency>
+</assembly>
