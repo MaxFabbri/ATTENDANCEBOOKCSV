@@ -663,7 +663,11 @@ Private Function makeTotalDailyRow()
                     End If
                 Else
                     If (Row = "") Then
-                        Row = separator & .quantity
+                        If (.quantity > 0) Then
+                            Row = separator & .quantity
+                        Else
+                            Row = separator
+                        End If
                     Else
                         Row = Concat(Row, .quantity, separator)
                     End If
@@ -671,7 +675,7 @@ Private Function makeTotalDailyRow()
             End If
             If (Err.Number <> 0) Then
                 If (Row = "") Then
-                    Row = separator & Row & separator
+                    Row = separator '& Row & separator
                 Else
                     Row = Row & separator
                 End If
